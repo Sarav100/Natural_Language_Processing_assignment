@@ -1,0 +1,134 @@
+{
+  "results": [
+    {
+      "model": "TF-IDF + LogReg",
+      "accuracy": 0.839,
+      "macro_precision": 0.6896,
+      "macro_recall": 0.6383,
+      "macro_f1": 0.6554,
+      "weighted_f1": 0.8248
+    },
+    {
+      "model": "DistilBERT (fine-tuned)",
+      "accuracy": 0.77,
+      "macro_precision": 0.6583,
+      "macro_recall": 0.6947,
+      "macro_f1": 0.6574,
+      "weighted_f1": 0.8012
+    }
+  ],
+  "clf_table": [
+    {
+      "model": "TF-IDF + LogReg",
+      "accuracy": 0.839,
+      "macro_precision": 0.69,
+      "macro_recall": 0.638,
+      "macro_f1": 0.655,
+      "weighted_f1": 0.825,
+      "train_s": 1.433
+    },
+    {
+      "model": "TF-IDF + LinearSVC",
+      "accuracy": 0.842,
+      "macro_precision": 0.719,
+      "macro_recall": 0.603,
+      "macro_f1": 0.625,
+      "weighted_f1": 0.813,
+      "train_s": 0.067
+    },
+    {
+      "model": "TF-IDF + MultinomialNB",
+      "accuracy": 0.803,
+      "macro_precision": 0.563,
+      "macro_recall": 0.476,
+      "macro_f1": 0.489,
+      "weighted_f1": 0.743,
+      "train_s": 0.005
+    }
+  ],
+  "stop_exp": [
+    {
+      "Variant": "Stop words kept",
+      "Macro-F1": 0.651
+    },
+    {
+      "Variant": "Stop words removed, negations kept",
+      "Macro-F1": 0.655
+    },
+    {
+      "Variant": "Stop words AND negations removed",
+      "Macro-F1": 0.642
+    }
+  ],
+  "full_f1": 0.7384063890311516,
+  "ner_f1": 0.663979859334208,
+  "bert_train_min": 0.7780027230580647,
+  "bert_inf_s": 3.626173496246338,
+  "lr_train_s": 1.7663402557373047,
+  "neg_shares": {
+    "the room was dirty and the bathroom smelled": 1.0,
+    "front desk staff were rude and unhelpful": 1.0,
+    "check in was slow and we waited hours for our room": 1.0,
+    "great location close to the beach and restaurants": 0.0
+  },
+  "knn": {
+    "kNN label agreement": {
+      "negative": 0.529,
+      "neutral": 0.193,
+      "positive": 0.888
+    },
+    "Chance (class share)": {
+      "negative": 0.157,
+      "neutral": 0.107,
+      "positive": 0.737
+    }
+  },
+  "critical": [
+    [
+      32,
+      156
+    ],
+    [
+      2,
+      156
+    ]
+  ],
+  "both_wrong": 93,
+  "hitl": [
+    {
+      "confidence threshold": 0.0,
+      "auto-handled": "100.0%",
+      "accuracy on auto-handled": "0.770",
+      "macro-F1 on auto-handled": "0.657",
+      "missed negatives (auto)": 2
+    },
+    {
+      "confidence threshold": 0.6,
+      "auto-handled": "84.2%",
+      "accuracy on auto-handled": "0.829",
+      "macro-F1 on auto-handled": "0.692",
+      "missed negatives (auto)": 2
+    },
+    {
+      "confidence threshold": 0.7,
+      "auto-handled": "67.9%",
+      "accuracy on auto-handled": "0.885",
+      "macro-F1 on auto-handled": "0.728",
+      "missed negatives (auto)": 1
+    },
+    {
+      "confidence threshold": 0.8,
+      "auto-handled": "47.0%",
+      "accuracy on auto-handled": "0.964",
+      "macro-F1 on auto-handled": "0.641",
+      "missed negatives (auto)": 0
+    },
+    {
+      "confidence threshold": 0.9,
+      "auto-handled": "6.2%",
+      "accuracy on auto-handled": "1.000",
+      "macro-F1 on auto-handled": "1.000",
+      "missed negatives (auto)": 0
+    }
+  ]
+}
